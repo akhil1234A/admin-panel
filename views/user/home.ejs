@@ -33,6 +33,7 @@
 
     <!-- Main Content -->
     <div class="container mt-5">
+        <input type="text" id="message" value="<%= typeof message !== 'undefined' ? message : '' %>" name="message" hidden>
         <div class="row">
             <div class="col-md-12 text-center">
                 <h1>Welcome, <%= user.email %>!</h1>

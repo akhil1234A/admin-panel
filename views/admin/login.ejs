@@ -4,44 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  <!-- <div id="particles-js" class="snow"></div> -->
-  <input type="text" id="message" value="<%= typeof message !== 'undefined' ? message : '' %>" name="message" hidden>
-
-  <main>
-    <div class="left-side"></div>
-    
-    <div class="right-side">
-      <form method="post" action="/admin/login">
-        <div class="btn-group">
-          <button class="btn">
-            <img class="logo" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d1c98974-c62d-4071-8bd2-ab859fc5f4e9" alt="" />
-            <span>Sign in with Google</span>
-          </button>
-          <button class="btn">
-            <img class="logo" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/59c1561b-8152-4d05-b617-0680a7629a0e" alt="" />
-            <span>Sign in with Apple</span>
-          </button>
-        </div>
-
-        <div class="or">OR</div>
-
-        <label for="email">Email</label>
-        <input type="text" id="email" placeholder="Enter Email" name="email" required />
-
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter Password" name="password" required />
-
-        <button type="submit" class="login-btn">Sign in</button>
-        <div class="links">
-          <a href="#">Forgot password?</a>
-          <a href="#">Do not have an account?</a>
-        </div>
-      </form>
-    </div>
-  </main>
+  <!-- <link rel="stylesheet" href="/css/style.css"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head> 
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 flex items-center justify-center min-h-screen">
+  
+   <input type="text" id="message" value="<%= typeof message !== 'undefined' ? message : '' %>" name="message" hidden>
+  <div class="bg-white shadow-lg rounded-lg p-8 max-w-xs md:max-w-md w-full">
+      <div id="login-form">
+          <h2 class="text-xl md:text-2xl font-bold text-center text-gray-800 mb-6">Log In</h2>
+          <form method="post" action="/admin/login">
+              <input type="email" id="email" name="email" placeholder="Email" class="w-full mb-4 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"  />
+              <input type="password" id="password" name="password" placeholder="Password" class="w-full mb-6 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
+              <button type="submit" class="w-full bg-purple-500 text-white py-2 md:py-3 rounded-lg font-semibold hover:bg-purple-600 transition duration-200">Log In</button>
+              <!-- <p class="text-center text-gray-600 mt-6">
+                  <a href="#" class="text-purple-500 hover:underline" onclick="toggleForm('forgot-password-form')">Forgot Password?</a>
+              </p> -->
+              <!-- <p class="text-center text-gray-600 mt-6">
+                  Don’t have an account? <a href="#" class="text-purple-500 hover:underline" onclick="toggleForm('signup-form')">Sign Up</a>
+              </p> -->
+          </form>
+      </div>
+   </div>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
