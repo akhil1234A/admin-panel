@@ -1,0 +1,14 @@
+
+
+starting server
+routes
+
+
+why we use routes, api, admin, user
+why we use app.use when setting routes, difference between app.get
+setting view engine
+  path , directory
+  express.static public 
+  layout - body, title  (hbs vs ejs vs pub)
+Order of Middleware
+  The order in which middleware is applied in Express matters. The middleware to parse the request body should be applied before your routes.
